@@ -5,12 +5,12 @@ LABEL org.opencontainers.image.authors="Piotr Zielinski"
 
 ENV PYTHONUNBUFFERED=1
 
-# Aktualizacja systemu, instalacja narzędzi build, aktualizacja pip i setuptools
+# Aktualizacja systemu, instalacja narzędzi build, aktualizacja pip i setuptools oraz instalacja zależności
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y --no-install-recommends build-essential curl && \
     pip install --upgrade pip==24.0 setuptools==78.1.1 && \
-    pip install --no-cache-dir flask==3.0.3 requests==2.32.2 \
+    pip install --no-cache-dir flask==3.0.3 requests==2.32.2 && \
     apt-get purge -y --auto-remove build-essential && \
     rm -rf /var/lib/apt/lists/*
 
