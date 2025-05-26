@@ -53,6 +53,7 @@ jobs:
         with:
           image-ref: ghcr.io/${{ github.repository_owner }}/pawchozad2:${{ github.sha }}
           format: 'sarif'
+          output: 'trivy-results.sarif'
           exit-code: '1'
           severity: 'CRITICAL,HIGH'
           ignore-unfixed: true
