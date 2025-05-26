@@ -3,7 +3,7 @@ name: Build and Push Multi-Arch Docker Image # Nazwa workflow
 on:
   push:
     branches:
-      - main # Workflow uruchamia się po pushu na gałąź main
+      - main # Workflow uruchamia się po pushu na main
 
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v4 # Pobranie kodu z repozytorium
 
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3 # Konfiguracja QEMU do cross-compilacji (wielu architektur)
+        uses: docker/setup-qemu-action@v3 # Konfiguracja QEMU do cross-compilacji
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3 # Ustawienie narzędzia Buildx do budowania obrazów wieloarchitekturnych

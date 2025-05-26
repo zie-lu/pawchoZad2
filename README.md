@@ -79,6 +79,8 @@ Wybrano **Trivy** jako narzędzie do automatycznego skanowania obrazów pod kąt
 ## Uruchamianie:
 - docker pull ghcr.io/zie-lu/pawchozad2:latest
 - docker run -p 5000:5000 ghcr.io/zie-lu/pawchozad2:latest
+- docker run --platform linux/amd64 -p 5000:5000 ghcr.io/zie-lu/pawchozad2:latest
+- docker run --platform linux/arm64 -p 5000:5000 ghcr.io/zie-lu/pawchozad2:latest
 
 ## Podsumowanie
 
