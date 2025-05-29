@@ -72,7 +72,7 @@ Wybrano **Trivy** jako narzędzie do automatycznego skanowania obrazów pod kąt
 
 - `DOCKERHUB_USERNAME` – login do DockerHub (dla cache)
 - `DOCKERHUB_TOKEN` – token/pat do DockerHub
-- `GHCR_TOKEN` – token do GHCR (można użyć `${{ secrets.GITHUB_TOKEN }}` jeśli repozytorium jest Twoje)
+- `GHCR_TOKEN` – token do GHCR
 
 ---
 
